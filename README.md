@@ -7,8 +7,10 @@ Static one-page portfolio for GitHub Pages. Built with semantic HTML, CSS and va
 - `index.html` — complete portfolio content and semantic sections
 - `styles.css` — core responsive visual system and theme layout
 - `styles-overrides.css` — final visual polish, accessibility focus states and motion refinements
-- `script.js` — navigation, theme toggle, credential counts, resume fallback and reveal effects
-- `assets/PHOTO_GUIDE.md` — instructions for the final professional photo asset
+- `script.js` — navigation, theme toggle, credential counts, resume opening/fallback and reveal effects
+- `assets/robot-portrait.svg` — temporary generated AI/robotics identity artwork
+- `assets/Tejal_Ubale_Resume.pdf` — public one-page resume
+- `assets/PHOTO_GUIDE.md` — instructions for an optional future professional photo
 - `.nojekyll` — keeps GitHub Pages in static-file mode
 
 ## Current content coverage
@@ -21,6 +23,7 @@ Static one-page portfolio for GitHub Pages. Built with semantic HTML, CSS and va
 - Additional project gallery including HealthBot, Customer Churn Dashboard, Cybersecurity Toolkit, AI Life Coach and MD5 Malware Detection Tool
 - Technical skills with honest positioning of current strengths and developing areas
 - Full education history: incoming OVGU M.Sc., bachelor's, HSC and SSC
+- HSC/SSC records retained without public school marks
 - IELTS Academic result and English medium-of-instruction note
 - Categorized credentials, job simulations, workshops and research/academic records
 - Community and leadership: NSS, Computer Association, Sea Cadet Corps, AIESEC and research participation
@@ -36,14 +39,9 @@ Static one-page portfolio for GitHub Pages. Built with semantic HTML, CSS and va
 - The **one-page resume** is the selected public-facing document for the portfolio. The longer academic CV is intentionally not duplicated on the website; it remains useful for formal applications.
 - Personal CV details such as date of birth, gender, nationality and full residential address are intentionally excluded from the public portfolio.
 
-## Final assets still pending
+## Identity artwork
 
-The site is complete without inventing personal assets. Only these optional final assets remain:
-
-1. Professional profile photo — add as `assets/tejal-ubale.jpg` using the supplied photo guide.
-2. One-page resume PDF — add as `assets/Tejal_Ubale_Resume.pdf`; the Resume CTA will open it automatically when present.
-
-The longer CV does not need to be uploaded for the portfolio to be complete.
+A generated abstract robotics illustration is currently used in the identity panel instead of a personal photograph. It is deliberately presented as illustrative artwork, not as a photograph of Tejal. The artwork can be replaced later without changing the layout.
 
 ## Contact
 
@@ -70,13 +68,16 @@ Recommended source configuration:
 - [x] Content hierarchy reviewed against supplied resume/CV information
 - [x] SkyNet / Avignon relationship corrected
 - [x] Bachelor's project context corrected
-- [x] HSC and SSC added
+- [x] HSC and SSC retained without scores
 - [x] Internship record retained without overcrowding the primary timeline
 - [x] Email and social links added
-- [x] Resume CTA has a safe fallback until the PDF exists
+- [x] One-page resume PDF added and wired to the Resume CTA
+- [x] Generated robotics identity artwork added
+- [x] Credential groups and rendered counts normalized
+- [x] Exact duplicate credential records removed at render time without deleting distinct credentials
 - [x] Reduced-motion handling added
 - [x] Keyboard focus states added
 - [x] Responsive visual refinement added
-- [ ] Add professional photo
-- [ ] Add one-page resume PDF
-- [ ] Browser/mobile visual QA after final assets are added
+- [x] Regression/QA record added in `FINAL_QA.md`
+- [ ] Optional future professional photo
+- [ ] Final manual browser/mobile inspection after deployment cache refresh
