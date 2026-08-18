@@ -53,9 +53,21 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-// The Resume CTA becomes a real download automatically once the one-page PDF is added.
+// Resume CTA: the one-page PDF is now present in the repository.
 const resumePath = 'assets/Tejal_Ubale_Resume.pdf';
 const credentialBtn = $('#credentialBtn');
+const resumeModalList = modal?.querySelector('.pending-list');
+const resumeModalAction = modal?.querySelector('.modal-panel a.btn-primary');
+if (resumeModalList) {
+  const last = resumeModalList.querySelector('span:last-child');
+  if (last) last.textContent = '✓ One-page resume PDF is available in the portfolio assets.';
+}
+if (resumeModalAction) {
+  resumeModalAction.href = resumePath;
+  resumeModalAction.target = '_blank';
+  resumeModalAction.rel = 'noreferrer';
+  resumeModalAction.textContent = 'Open one-page resume ↗';
+}
 credentialBtn?.addEventListener('click', async () => {
   try {
     const response = await fetch(resumePath, { method: 'HEAD', cache: 'no-store' });
@@ -64,7 +76,7 @@ credentialBtn?.addEventListener('click', async () => {
       return;
     }
   } catch (_) {
-    // Static GitHub Pages may reject HEAD; the modal remains the safe fallback.
+    // Fall back to the modal if a static host blocks HEAD requests.
   }
   openModal();
 });
@@ -77,6 +89,14 @@ document.addEventListener('keydown', (e) => {
 
 const year = $('#year');
 if (year) year.textContent = new Date().getFullYear();
+
+// Remove only exact duplicate credential records (same title + issuer/date line), preserving distinct records.
+const seenCredentials = new Set();
+$$('.credential-list > div').forEach((item) => {
+  const key = item.textContent.replace(/\s+/g, ' ').trim().toLowerCase();
+  if (seenCredentials.has(key)) item.remove();
+  else seenCredentials.add(key);
+});
 $$('.credential-groups details').forEach((group) => {
   const items = group.querySelectorAll('.credential-list > div').length;
   const count = group.querySelector('summary b');
