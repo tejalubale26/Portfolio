@@ -1,25 +1,28 @@
-/* Final visual refinement layer: restrained motion, stronger hierarchy, better focus states. */
+/* Final visual refinement layer — intentionally additive so the existing portfolio remains intact. */
 :root{--accent:#b79cff;--accent-2:#72e7f4}
 body{background:radial-gradient(circle at 72% 8%,rgba(183,156,255,.055),transparent 28%),var(--bg)}
 .site-header{box-shadow:0 8px 30px rgba(0,0,0,.08)}
 .desktop-nav a,.text-link,.btn,.skill-chip,.project-card,.about-pillars article,.timeline-card,.community-grid article,.education-card{transition:transform .24s ease,border-color .24s ease,background-color .24s ease,color .24s ease,box-shadow .24s ease}
-.desktop-nav a{position:relative}
-.desktop-nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-8px;height:1px;background:var(--accent-2);transition:right .24s ease}
-.desktop-nav a:hover::after,.desktop-nav a:focus-visible::after{right:0}
+.desktop-nav a{position:relative}.desktop-nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-8px;height:1px;background:var(--accent-2);transition:right .24s ease}.desktop-nav a:hover::after,.desktop-nav a:focus-visible::after{right:0}
 .btn:focus-visible,.icon-btn:focus-visible,.menu-btn:focus-visible,.text-link:focus-visible,.desktop-nav a:focus-visible,.mobile-nav a:focus-visible{outline:2px solid var(--accent-2);outline-offset:4px}
 .identity-panel:hover{transform:translateY(-3px);box-shadow:0 30px 80px rgba(0,0,0,.38)}
 .project-card:hover{box-shadow:0 20px 55px rgba(0,0,0,.22)}
 .project-card:hover .project-tags span,.skill-chip:hover{border-color:color-mix(in srgb,var(--accent) 65%,var(--line))}
 .principle-grid article:hover,.about-pillars article:hover,.community-grid article:hover,.education-card:hover{transform:translateY(-3px);box-shadow:0 18px 45px rgba(0,0,0,.16)}
 .timeline-card:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
-.pending-photo{position:relative;overflow:hidden}
-.pending-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.08) 50%,transparent 70%);transform:translateX(-100%);animation:photoShimmer 5s ease-in-out infinite}
-@keyframes photoShimmer{0%,55%{transform:translateX(-100%)}75%,100%{transform:translateX(100%)}}
+
+/* Temporary identity artwork: generated robotics motif instead of a personal photograph. */
+.identity-photo{position:relative;overflow:hidden;background-image:url('assets/robot-portrait.svg');background-size:cover;background-position:center;border-bottom:1px solid var(--line)}
+.identity-photo span,.identity-photo small{display:none}
+.identity-photo::after{content:"AI / ROBOTICS";position:absolute;left:18px;bottom:16px;padding:7px 9px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(9,11,16,.68);backdrop-filter:blur(8px);color:#d9deea;font:500 9px 'DM Mono',monospace;letter-spacing:.14em}
+.pending-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(0,0,0,.32));z-index:1;pointer-events:none}
+
+/* Public portfolio intentionally omits secondary-school marks. */
+.education-card:nth-child(3) p:last-child,.education-card:nth-child(4) p:last-child{display:none}
+
 .language-card{margin-top:18px;border:1px solid var(--line);background:var(--surface);border-radius:18px;padding:20px 24px;display:grid;grid-template-columns:180px 1fr;gap:20px;align-items:start}
 .language-card p{margin:0;color:var(--muted);font-size:13px}
 .additional-experience{margin-top:28px;border:1px solid var(--line);background:linear-gradient(120deg,rgba(255,255,255,.02),var(--surface));border-radius:20px;padding:24px;display:grid;grid-template-columns:.7fr 1.3fr;gap:24px}
-.additional-experience p{color:var(--muted);font-size:13px;margin:0}
-.additional-experience ul{margin:0;padding-left:20px;color:var(--muted);font-size:13px;columns:2;column-gap:35px}
-.additional-experience li{break-inside:avoid;margin:6px 0}
-@media(max-width:900px){.additional-experience{grid-template-columns:1fr}.language-card{grid-template-columns:1fr;gap:8px}.additional-experience ul{columns:1}}
+.additional-experience p{color:var(--muted);font-size:13px;margin:0}.additional-experience ul{margin:0;padding-left:20px;color:var(--muted);font-size:13px;columns:2;column-gap:35px}.additional-experience li{break-inside:avoid;margin:6px 0}
+@media(max-width:900px){.additional-experience{grid-template-columns:1fr}.language-card{grid-template-columns:1fr;gap:8px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
