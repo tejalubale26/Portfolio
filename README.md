@@ -5,56 +5,78 @@ Static one-page portfolio for GitHub Pages. Built with semantic HTML, CSS and va
 ## Structure
 
 - `index.html` — complete portfolio content and semantic sections
-- `styles.css` — responsive visual system, dark/light theme and layout
-- `script.js` — navigation, theme toggle, credential counts, social-channel wiring and reveal effects
-- `.nojekyll` — keeps GitHub Pages in static-file mode without an unnecessary Jekyll build
+- `styles.css` — core responsive visual system and theme layout
+- `styles-overrides.css` — final visual polish, accessibility focus states and motion refinements
+- `script.js` — navigation, theme toggle, credential counts, resume fallback and reveal effects
+- `assets/PHOTO_GUIDE.md` — instructions for the final professional photo asset
+- `.nojekyll` — keeps GitHub Pages in static-file mode
 
 ## Current content coverage
 
 - Hero + identity panel
 - Engineering Principles
 - About
-- AI/Robotics and AI-agent experience
+- Full internship record, with the two strongest experiences expanded and earlier internships compacted
 - Featured projects: SkyNet, Comprehensive Enterprise Insights Platform, AI Customer Support Agent
 - Additional project gallery including HealthBot, Customer Churn Dashboard, Cybersecurity Toolkit, AI Life Coach and MD5 Malware Detection Tool
-- Technical skills with honest positioning of current strengths and development areas
+- Technical skills with honest positioning of current strengths and developing areas
 - Full education history: incoming OVGU M.Sc., bachelor's, HSC and SSC
-- Categorized certifications and learning records
-- Community and leadership: NSS, Computer Association, Sea Cadet Corps
+- IELTS Academic result and English medium-of-instruction note
+- Categorized credentials, job simulations, workshops and research/academic records
+- Community and leadership: NSS, Computer Association, Sea Cadet Corps, AIESEC and research participation
 - Journey timeline
 - Collaboration-focused contact CTA
-- LinkedIn, GitHub, X/Twitter and Discord channel information
+- LinkedIn, GitHub, X/Twitter, email and Discord information
+
+## Content decisions
+
+- **SkyNet** is the principal technical project developed during the Avignon University AI & Robotics internship. It is linked from both the relevant experience entry and the project section without pretending that it was a separate employment experience.
+- **Comprehensive Enterprise Insights Platform** is identified as the bachelor's final-year / black-book project.
+- **AI Life Coach** and **MD5 Hash-Based Malware Detection Tool** are identified as bachelor's subject-focused projects and are therefore supporting gallery items rather than featured work.
+- The **one-page resume** is the selected public-facing document for the portfolio. The longer academic CV is intentionally not duplicated on the website; it remains useful for formal applications.
+- Personal CV details such as date of birth, gender, nationality and full residential address are intentionally excluded from the public portfolio.
 
 ## Final assets still pending
 
-The portfolio intentionally does **not** link placeholder files. The following should be added when available:
+The site is complete without inventing personal assets. Only these optional final assets remain:
 
-1. Professional profile photo
-2. One-page resume PDF
-3. Two-page CV PDF
-4. Final email address/link
+1. Professional profile photo — add as `assets/tejal-ubale.jpg` using the supplied photo guide.
+2. One-page resume PDF — add as `assets/Tejal_Ubale_Resume.pdf`; the Resume CTA will open it automatically when present.
 
-X/Twitter and Discord details are already supplied and represented in the portfolio: `https://x.com/ubale_tejal` and Discord username `tejal_ubale26`.
+The longer CV does not need to be uploaded for the portfolio to be complete.
+
+## Contact
+
+- Email: `tejalubale26@gmail.com`
+- LinkedIn: `https://www.linkedin.com/in/tejal-ubale-0aa8b3248/`
+- GitHub: `https://github.com/tejalubale26`
+- X/Twitter: `https://x.com/ubale_tejal`
+- Discord: `tejal_ubale26`
 
 ## GitHub Pages deployment
 
-The repository is public and GitHub Pages is enabled. GitHub Pages can publish static HTML, CSS and JavaScript directly from a repository; for this project no Node.js, npm, bundler or server is required.
+The repository is public and GitHub Pages is enabled. The project requires no Node.js, npm, bundler or server.
 
 Recommended source configuration:
 
 1. Open **Settings → Pages**.
 2. Under **Build and deployment**, choose **Deploy from a branch**.
 3. Select `main` and `/ (root)`.
-4. Save and wait for the Pages deployment to finish.
+4. Save and wait for deployment to finish.
 5. Verify the published URL and enable **Enforce HTTPS** when available.
 
-## Content policy used in the portfolio
+## Final QA checklist
 
-Older academic projects are retained as supporting evidence rather than presented as equivalent to the strongest current work. SkyNet is correctly represented as the principal project from the Avignon University internship and as the corresponding project entry, not as a separate employment experience. The Comprehensive Enterprise Insights Platform is identified as the bachelor's final-year / black-book project. AI Life Coach and the MD5 Hash-Based Malware Detection Tool are identified as bachelor's subject-focused projects.
-
-## Planned final pass
-
-- Add the professional photo when provided.
-- Add the one-page resume and two-page CV when the files are available.
-- Connect the final email address.
-- Perform a final browser/mobile QA pass after the assets are added.
+- [x] Content hierarchy reviewed against supplied resume/CV information
+- [x] SkyNet / Avignon relationship corrected
+- [x] Bachelor's project context corrected
+- [x] HSC and SSC added
+- [x] Internship record retained without overcrowding the primary timeline
+- [x] Email and social links added
+- [x] Resume CTA has a safe fallback until the PDF exists
+- [x] Reduced-motion handling added
+- [x] Keyboard focus states added
+- [x] Responsive visual refinement added
+- [ ] Add professional photo
+- [ ] Add one-page resume PDF
+- [ ] Browser/mobile visual QA after final assets are added
