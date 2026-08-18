@@ -26,6 +26,13 @@ menuBtn?.addEventListener('click',()=>{
 $$('.mobile-nav a').forEach(a=>a.addEventListener('click',closeMobileNav));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobileNav()});
 
+// Keep the full one-page structure discoverable from both desktop and mobile navigation.
+$$('.desktop-nav, .mobile-nav').forEach(nav=>{
+  if(!nav.querySelector('a[href="#community"]'))nav.insertAdjacentHTML('beforeend','<a href="#community">Community</a>');
+  if(!nav.querySelector('a[href="#journey"]'))nav.insertAdjacentHTML('beforeend','<a href="#journey">Journey</a>');
+});
+$$('.mobile-nav a').forEach(a=>a.addEventListener('click',closeMobileNav));
+
 // Contact channels supplied for the final contact pass.
 const contactNote=$('.contact-note');
 if(contactNote){
