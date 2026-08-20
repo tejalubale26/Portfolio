@@ -11,10 +11,12 @@ Static one-page portfolio for GitHub Pages. Built with semantic HTML, CSS and va
 - `assets/tejal-ubale.jpg` — personal profile photograph used in the identity panel
 - `assets/Tejal_Ubale_Resume.pdf` — public one-page resume
 - `assets/PHOTO_GUIDE.md` — guidance for maintaining or replacing the professional photo
+- `robots.txt` — basic crawler policy pointing to the public sitemap
+- `sitemap.xml` — public portfolio sitemap
 - `.nojekyll` — keeps GitHub Pages in static-file mode
 - `FINAL_QA.md` — source-level QA record and remaining manual browser-validation checklist
 
-## Current content coverage
+## Content coverage
 
 - Hero + personal identity panel
 - Engineering Principles
@@ -54,6 +56,10 @@ The identity panel uses the personal photograph stored at `assets/tejal-ubale.jp
 - Theme preference is persisted locally
 - Resume CTA uses the local PDF and retains a fallback modal
 
+## SEO / discovery
+
+The page includes a focused description, Open Graph title/description, a crawlable `robots.txt` and a single-page XML sitemap for the GitHub Pages URL. No analytics or tracking scripts were added.
+
 ## Contact
 
 - Email: `tejalubale26@gmail.com`
@@ -91,6 +97,7 @@ Recommended source configuration:
 - [x] Keyboard focus states added
 - [x] Sticky-header anchor behavior refined
 - [x] Responsive identity-photo crop refined
+- [x] Basic robots.txt and sitemap added
 - [x] Repository QA record maintained in `FINAL_QA.md`
 - [x] Source-level regression checks repeated after the latest iteration
 - [ ] Final manual browser/mobile inspection after deployment cache refresh
