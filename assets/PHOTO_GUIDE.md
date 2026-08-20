@@ -1,14 +1,22 @@
 # Professional Photo Guide
 
-Add the final professional headshot as `assets/tejal-ubale.jpg`.
+The portfolio now uses the personal photograph at `assets/tejal-ubale.jpg` in the identity panel.
 
-Recommended treatment:
-- Portrait orientation, approximately 4:5 or 1:1 crop.
-- Head-and-shoulders framing; face and eyes clearly visible.
+## Current implementation
+
+- Portrait image is loaded locally from the repository, so the portfolio does not depend on an external image host.
+- Desktop and mobile use a responsive cover crop.
+- The identity panel uses the photograph as the visual focal point rather than an AI-generated portrait.
+- Keep the source image sharp enough for the square desktop presentation and mobile crop.
+
+## If the photograph is replaced later
+
+Prefer:
+- Portrait orientation, approximately 4:5 or 1:1.
+- Head-and-shoulders framing with face and eyes clearly visible.
 - Neutral, uncluttered background with soft natural or studio lighting.
-- Professional but approachable expression; avoid heavy filters, dramatic effects, or distracting props.
-- Clothing: clean, understated professional/semi-formal attire in neutral tones.
-- Image should be sharp at desktop resolution and remain readable when cropped on mobile.
-- Prefer a real photograph over an AI-generated portrait.
+- Professional but approachable expression.
+- Clean, understated professional or semi-formal clothing.
+- No heavy filters, distracting props or excessive background detail.
 
-The portfolio currently uses a deliberate `TU` placeholder so the site remains complete without inventing a personal image. Replace the placeholder only when the final photo is available.
+If the filename changes, update the `background-image` URL in `styles-overrides.css` and re-run the repository QA checks before deployment.
