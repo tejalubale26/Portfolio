@@ -101,7 +101,10 @@ $$('.credential-groups details').forEach((group) => {
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (!reduceMotion && 'IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add('visible');
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
   }), { threshold: 0.08 });
   $$('.reveal').forEach((el) => observer.observe(el));
 } else {
