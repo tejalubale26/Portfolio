@@ -6,13 +6,13 @@ Static one-page portfolio for GitHub Pages. Built with semantic HTML, CSS and va
 
 - `index.html` — complete portfolio content and semantic sections
 - `styles.css` — core responsive visual system and theme layout
-- `styles-overrides.css` — final visual polish, accessibility focus states, responsive refinements and identity-photo treatment
+- `styles-overrides.css` — additive visual polish, identity-photo treatment, accessibility focus states, responsive refinements and reduced-motion behavior
 - `script.js` — navigation, theme toggle, credential counts, resume opening/fallback and reveal effects
 - `assets/tejal-ubale.jpg` — personal profile photograph used in the identity panel
-- `assets/robot-portrait.svg` — legacy robotics artwork retained as an unused repository asset
 - `assets/Tejal_Ubale_Resume.pdf` — public one-page resume
-- `assets/PHOTO_GUIDE.md` — original guidance for selecting the professional photo
+- `assets/PHOTO_GUIDE.md` — guidance for maintaining or replacing the professional photo
 - `.nojekyll` — keeps GitHub Pages in static-file mode
+- `FINAL_QA.md` — source-level QA record and remaining manual browser-validation checklist
 
 ## Current content coverage
 
@@ -42,7 +42,17 @@ Static one-page portfolio for GitHub Pages. Built with semantic HTML, CSS and va
 
 ## Identity photo
 
-The identity panel now uses the personal photograph stored at `assets/tejal-ubale.jpg`. The previous robotics illustration is no longer used by the live identity-panel CSS. The legacy SVG remains in the repository temporarily so it can be removed safely after a final reference check.
+The identity panel uses the personal photograph stored at `assets/tejal-ubale.jpg`. The previous robotics artwork was removed after confirming it had no active source references. The photo is loaded locally and uses a responsive cover crop for the identity panel.
+
+## Accessibility and interaction refinements
+
+- Visible keyboard focus states for navigation, controls and links
+- Sticky-header-aware anchor scrolling
+- Reduced-motion mode disables reveal animation rather than merely shortening it
+- Reveal observers stop observing elements after they become visible
+- Mobile navigation updates `aria-expanded` / `aria-hidden`
+- Theme preference is persisted locally
+- Resume CTA uses the local PDF and retains a fallback modal
 
 ## Contact
 
@@ -74,12 +84,13 @@ Recommended source configuration:
 - [x] Email and social links added
 - [x] One-page resume PDF added and wired to the Resume CTA
 - [x] Personal photograph added and wired to the identity panel
-- [x] Legacy robotics artwork removed from the active identity styling
+- [x] Legacy robotics artwork removed after reference check
 - [x] Credential groups and rendered counts normalized
 - [x] Exact duplicate credential records removed at render time without deleting distinct credentials
-- [x] Reduced-motion handling added
+- [x] Reduced-motion handling refined
 - [x] Keyboard focus states added
-- [x] Responsive visual refinement added
+- [x] Sticky-header anchor behavior refined
+- [x] Responsive identity-photo crop refined
 - [x] Repository QA record maintained in `FINAL_QA.md`
-- [x] Source-level regression checks repeated after the identity-photo iteration
+- [x] Source-level regression checks repeated after the latest iteration
 - [ ] Final manual browser/mobile inspection after deployment cache refresh
