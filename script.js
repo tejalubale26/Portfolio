@@ -1,7 +1,6 @@
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => document.querySelectorAll(s);
 
-// Load a small visual/accessibility enhancement layer without adding a build step.
 const enhancementStyles = document.createElement('link');
 enhancementStyles.rel = 'stylesheet';
 enhancementStyles.href = 'styles-overrides.css';
@@ -53,7 +52,6 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-// Resume CTA: the one-page PDF is now present in the repository.
 const resumePath = 'assets/Tejal_Ubale_Resume.pdf';
 const credentialBtn = $('#credentialBtn');
 const resumeModalList = modal?.querySelector('.pending-list');
@@ -75,9 +73,7 @@ credentialBtn?.addEventListener('click', async () => {
       window.open(resumePath, '_blank', 'noopener,noreferrer');
       return;
     }
-  } catch (_) {
-    // Fall back to the modal if a static host blocks HEAD requests.
-  }
+  } catch (_) {}
   openModal();
 });
 $$('[data-close="credentialModal"]').forEach((b) => b.addEventListener('click', closeModal));
@@ -90,7 +86,6 @@ document.addEventListener('keydown', (e) => {
 const year = $('#year');
 if (year) year.textContent = new Date().getFullYear();
 
-// Remove only exact duplicate credential records (same title + issuer/date line), preserving distinct records.
 const seenCredentials = new Set();
 $$('.credential-list > div').forEach((item) => {
   const key = item.textContent.replace(/\s+/g, ' ').trim().toLowerCase();
@@ -103,7 +98,6 @@ $$('.credential-groups details').forEach((group) => {
   if (count) count.textContent = `${items} records`;
 });
 
-// Reveal-on-scroll, disabled for users who request reduced motion.
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (!reduceMotion && 'IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
