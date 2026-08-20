@@ -6,16 +6,17 @@ Static one-page portfolio for GitHub Pages. Built with semantic HTML, CSS and va
 
 - `index.html` — complete portfolio content and semantic sections
 - `styles.css` — core responsive visual system and theme layout
-- `styles-overrides.css` — final visual polish, accessibility focus states and motion refinements
+- `styles-overrides.css` — final visual polish, accessibility focus states, responsive refinements and identity-photo treatment
 - `script.js` — navigation, theme toggle, credential counts, resume opening/fallback and reveal effects
-- `assets/robot-portrait.svg` — temporary generated AI/robotics identity artwork
+- `assets/tejal-ubale.jpg` — personal profile photograph used in the identity panel
+- `assets/robot-portrait.svg` — legacy robotics artwork retained as an unused repository asset
 - `assets/Tejal_Ubale_Resume.pdf` — public one-page resume
-- `assets/PHOTO_GUIDE.md` — instructions for an optional future professional photo
+- `assets/PHOTO_GUIDE.md` — original guidance for selecting the professional photo
 - `.nojekyll` — keeps GitHub Pages in static-file mode
 
 ## Current content coverage
 
-- Hero + identity panel
+- Hero + personal identity panel
 - Engineering Principles
 - About
 - Full internship record, with the two strongest experiences expanded and earlier internships compacted
@@ -39,9 +40,9 @@ Static one-page portfolio for GitHub Pages. Built with semantic HTML, CSS and va
 - The **one-page resume** is the selected public-facing document for the portfolio. The longer academic CV is intentionally not duplicated on the website; it remains useful for formal applications.
 - Personal CV details such as date of birth, gender, nationality and full residential address are intentionally excluded from the public portfolio.
 
-## Identity artwork
+## Identity photo
 
-A generated abstract robotics illustration is currently used in the identity panel instead of a personal photograph. It is deliberately presented as illustrative artwork, not as a photograph of Tejal. The artwork can be replaced later without changing the layout.
+The identity panel now uses the personal photograph stored at `assets/tejal-ubale.jpg`. The previous robotics illustration is no longer used by the live identity-panel CSS. The legacy SVG remains in the repository temporarily so it can be removed safely after a final reference check.
 
 ## Contact
 
@@ -63,7 +64,7 @@ Recommended source configuration:
 4. Save and wait for deployment to finish.
 5. Verify the published URL and enable **Enforce HTTPS** when available.
 
-## Final QA checklist
+## QA status
 
 - [x] Content hierarchy reviewed against supplied resume/CV information
 - [x] SkyNet / Avignon relationship corrected
@@ -72,12 +73,13 @@ Recommended source configuration:
 - [x] Internship record retained without overcrowding the primary timeline
 - [x] Email and social links added
 - [x] One-page resume PDF added and wired to the Resume CTA
-- [x] Generated robotics identity artwork added
+- [x] Personal photograph added and wired to the identity panel
+- [x] Legacy robotics artwork removed from the active identity styling
 - [x] Credential groups and rendered counts normalized
 - [x] Exact duplicate credential records removed at render time without deleting distinct credentials
 - [x] Reduced-motion handling added
 - [x] Keyboard focus states added
 - [x] Responsive visual refinement added
-- [x] Regression/QA record added in `FINAL_QA.md`
-- [ ] Optional future professional photo
+- [x] Repository QA record maintained in `FINAL_QA.md`
+- [x] Source-level regression checks repeated after the identity-photo iteration
 - [ ] Final manual browser/mobile inspection after deployment cache refresh
