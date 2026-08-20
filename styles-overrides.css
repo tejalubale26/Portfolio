@@ -11,10 +11,10 @@ body{background:radial-gradient(circle at 72% 8%,rgba(183,156,255,.055),transpar
 .principle-grid article:hover,.about-pillars article:hover,.community-grid article:hover,.education-card:hover{transform:translateY(-3px);box-shadow:0 18px 45px rgba(0,0,0,.16)}
 .timeline-card:hover{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
 
-/* Temporary identity artwork: generated robotics motif instead of a personal photograph. */
-.identity-photo{position:relative;overflow:hidden;background-image:url('assets/robot-portrait.svg');background-size:cover;background-position:center;border-bottom:1px solid var(--line)}
+/* Personal identity asset: use the user's photograph stored in the repository. */
+.identity-photo{position:relative;overflow:hidden;background-image:url('assets/tejal-ubale.jpg');background-size:cover;background-position:center;border-bottom:1px solid var(--line)}
 .identity-photo span,.identity-photo small{display:none}
-.identity-photo::after{content:"AI / ROBOTICS";position:absolute;left:18px;bottom:16px;padding:7px 9px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(9,11,16,.68);backdrop-filter:blur(8px);color:#d9deea;font:500 9px 'DM Mono',monospace;letter-spacing:.14em}
+.identity-photo::after{content:"TEJAL UBALE";position:absolute;left:18px;bottom:16px;padding:7px 9px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(9,11,16,.68);backdrop-filter:blur(8px);color:#d9deea;font:500 9px 'DM Mono',monospace;letter-spacing:.14em}
 .pending-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(0,0,0,.32));z-index:1;pointer-events:none}
 
 /* Public portfolio intentionally omits secondary-school marks. */
